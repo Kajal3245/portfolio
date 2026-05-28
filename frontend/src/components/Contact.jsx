@@ -2,9 +2,9 @@ import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const socials = [
-  { icon: '📧', label: 'kajalkmari985@gmail.com', href: 'mailto:kajalkmari985@gmail.com' },
-  { icon: '💼', label: 'linkedin.com', href: 'https://www.linkedin.com/in/kajal-kumari-0717362a7/' },
-  { icon: '🐙', label: 'github.com', href: 'https://github.com/Kajal3245' },
+  { icon: ' --', label: 'kajalkmari985@gmail.com', href: 'mailto:kajalkmari985@gmail.com' },
+  { icon: '--', label: 'linkedin.com', href: 'https://www.linkedin.com/in/kajal-kumari-0717362a7/' },
+  { icon: '--', label: 'github.com', href: 'https://github.com/Kajal3245' },
 
 ]
 
