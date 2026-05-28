@@ -7,7 +7,7 @@
     "dev": "vite --port 5173",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "serve dist -s -l tcp://0.0.0.0:$PORT"
+    "start": "serve dist -s -p ${PORT:-10000} --listen 0.0.0.0"
   },
   "dependencies": {
     "react": "^18.3.1",
