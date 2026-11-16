@@ -2,12 +2,12 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const skills = [
-  { icon: ' ', name: 'Deep Learning', pct: 92, tech: 'PyTorch · TensorFlow · JAX · Keras' },
-  { icon: ' ', name: 'Natural Language Processing', pct: 88, tech: 'Transformers · HuggingFace · LangChain · spaCy' },
-  { icon: ' ', name: 'Computer Vision', pct: 85, tech: 'OpenCV · YOLO · Detectron2 · CLIP · ViTs' },
-  { icon: ' ', name: 'Python / ML Engineering', pct: 95, tech: 'NumPy · Pandas · Scikit-learn · FastAPI' },
-  { icon: ' ', name: 'Cloud & MLOps', pct: 78, tech: 'AWS · GCP · Docker · MLflow · Weights & Biases' },
-  { icon: ' ', name: 'Data Science & Research', pct: 90, tech: 'Statistics · Jupyter · SQL · LaTeX · R' },
+  { icon: ' ', name: 'Generative AI', pct: 90, tech: 'Google Gemini · LLM Applications · Prompt Engineering' },
+  { icon: ' ', name: 'Machine Learning', pct: 90, tech: 'Scikit-learn · Supervised Learning · Classification · Feature Engineering' },
+  { icon: ' ', name: 'Data Analytics', pct: 88, tech: 'Pandas · NumPy · Matplotlib · Seaborn · Plotly · Power BI · Excel' },
+  { icon: ' ', name: 'Web Development', pct: 90, tech: 'React · FastAPI · HTML5 · CSS3 · JavaScript · REST APIs' },
+  { icon: ' ', name: 'Programming & Databases', pct: 88, tech: 'Python · Java · C++ · SQL · MySQL' },
+  { icon: ' ', name: 'Tools & Development', pct: 85, tech: 'Git · GitHub · VS Code · Jupyter Notebook · Vercel · Railway' },
 ]
 
 function SkillCard({ skill, delay }) {

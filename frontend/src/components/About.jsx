@@ -1,9 +1,17 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import aboutImg from '../assets/about.jpg'
-import resumePdf from '../assets/Kajal_Resume.pdf'
 
-const tags = ['Deep Learning', 'NLP', 'Computer Vision', 'Reinforcement Learning', 'MLOps', 'Research', 'Python', 'PyTorch']
+const tags = [
+  'Generative AI',
+  'Machine Learning',
+  'LLM Applications',
+  'Google Gemini',
+  'Prompt Engineering',
+  'Computer Vision',
+  'NLP',
+  'Python'
+]
 
 export default function About() {
   const ref = useRef(null)
@@ -27,32 +35,32 @@ export default function About() {
               />
             </div>
             <div className="about-badge">
-              <span className="badge-n">7.14</span>
+              <span className="badge-n">7.43</span>
               <span className="badge-t">CGPA</span>
             </div>
           </motion.div>
 
           <motion.div variants={right} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
             <div className="section-label">About Me</div>
+
             <h2 className="section-title" style={{ marginBottom: '1.4rem' }}>
               I understand data.<br />I question data.<br />I ship futures.
             </h2>
-            <p className="about-text">
 
-
-              I am a 3rd Year B.Tech student passionate about Data Science, AI, and Web Development. I enjoy learning new technologies and building projects related to Machine Learning and Data Analysis.
-            </p>
             <p className="about-text">
-              Currently, I am improving my programming and problem-solving skills while working on real-world projects.
+              I am a 4th Year B.Tech student passionate about Generative AI,
+              Machine Learning, and Full-Stack Development. I enjoy learning
+              new technologies and building practical AI-powered applications.
             </p>
+
+            <p className="about-text">
+              Currently, I am strengthening my programming and problem-solving
+              skills while working on real-world projects involving Generative
+              AI, Machine Learning, Computer Vision, and modern web technologies.
+            </p>
+
             <div className="tags">
               {tags.map(t => <span className="tag" key={t}>{t}</span>)}
-            </div>
-            <div className="resume-btn-wrap">
-              <a href={resumePdf} download="Kajal_Resume.pdf" className="btn-resume">
-                <span className="btn-resume-icon">⤓</span>
-                Download Resume
-              </a>
             </div>
           </motion.div>
         </div>

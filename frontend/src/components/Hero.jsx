@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 import Spline from '@splinetool/react-spline'
 
 const ROLES = [
-  'AI / ML Engineer',
-  'Federated Learning Engineer',
-  'Computer Vision/Neural Network',
-  'NLP & Deep Learning Enthusiast',
-  'Generative AI Builder',
+  'Generative AI Developer',
+  'Machine Learning Engineer',
+  'Computer Vision Developer',
+  'NLP & AI Enthusiast',
+  'Full-Stack AI Developer',
 ]
 
 function useTyping(words, speed = 80, pause = 1800) {
@@ -72,9 +72,9 @@ function SplineFallback() {
 
 export default function Hero() {
   const typed = useTyping(ROLES)
-  const c1 = useCounter(24)
-  const c2 = useCounter(187)
-  const c3 = useCounter(8)
+  const c1 = useCounter(4)
+  const c2 = useCounter(2)
+  const c3 = useCounter(3)
 
   const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }
   const item = { hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: .8, ease: [0.16, 1, 0.3, 1] } } }
@@ -83,7 +83,7 @@ export default function Hero() {
     <section className="hero" id="home">
       <motion.div className="hero-left" variants={stagger} initial="hidden" animate="visible">
         <motion.div className="hero-eyebrow" variants={item}>
-          AI/ML Engineer &amp; Researcher
+          Generative AI &amp; Machine Learning Developer
         </motion.div>
         <motion.h1 className="hero-name" variants={item}>
           <div className="n1">Kajal</div>
@@ -95,7 +95,7 @@ export default function Hero() {
           <span className="cursor-blink">_</span>
         </motion.p>
         <motion.p className="hero-desc" variants={item}>
-          I’m especially interested in Artificial Intelligence and modern software development, and I enjoy exploring how data and clean design can create impactful applications.
+          I’m passionate about Generative AI, Machine Learning, and modern software development. I enjoy building practical AI-powered applications using Python, Google Gemini, FastAPI, React, and Machine Learning.
         </motion.p>
         <motion.div className="hero-btns" variants={item}>
           <a href="#projects" className="btn-primary">View Projects →</a>
@@ -108,11 +108,11 @@ export default function Hero() {
           </div>
           <div className="stat-item">
             <span className="stat-num">{c2}+</span>
-            <span className="stat-label">Papers Read</span>
+            <span className="stat-label">AI Experiences</span>
           </div>
           <div className="stat-item">
-            <span className="stat-num">{c3}</span>
-            <span className="stat-label">Competitions</span>
+            <span className="stat-num">{c3}+</span>
+            <span className="stat-label">Core AI Domains</span>
           </div>
         </motion.div>
       </motion.div>

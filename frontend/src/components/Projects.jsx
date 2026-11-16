@@ -3,44 +3,44 @@ import { motion, useInView } from 'framer-motion'
 
 const projects = [
   {
-    icon: '🌌', banner: 'b1', featured: true,
-    type: 'prediction task · Featured',
-    name: 'sonar-rock-vs-mine-prediction',
-    desc: 'The project is typically based on the Connectionist Bench (Sonar, Mines vs. Rocks) dataset',
-    stack: ['PyTorch', 'Diffusers', 'CUDA', 'FastAPI', 'React'],
-    link: 'https://github.com/Kajal3245/sonar-rock-vs-mine-prediction.git',
+    icon: '📄',
+    banner: 'b1',
+    featured: true,
+    type: 'Generative AI · Full Stack',
+    name: 'In2Peta — AI PDF Learning Platform',
+    desc: 'An AI-powered PDF learning platform that allows users to upload documents and ask context-aware questions using Google Gemini.',
+    stack: ['React', 'FastAPI', 'Python', 'Google Gemini'],
+    link: 'https://github.com/Kajal3245/AI-PDF-Learning-Platform',
   },
   {
-    icon: '🔬', banner: 'b2', featured: false,
+    icon: '🎙️',
+    banner: 'b2',
+    featured: false,
+    type: 'Generative AI · Full Stack',
+    name: 'FluentFace AI — English Speaking Tutor',
+    desc: 'An AI English speaking tutor providing speech recognition, grammar correction, pronunciation feedback, voice responses, and follow-up questions.',
+    stack: ['React', 'FastAPI', 'Python', 'Google Gemini'],
+    link: 'https://github.com/Kajal3245/FluentFaceAI',
+  },
+  {
+    icon: '👵',
+    banner: 'b3',
+    featured: false,
+    type: 'Mobile · Application Development',
+    name: 'ElderCare Guardian',
+    desc: 'An application focused on providing technology-based assistance and safety-focused features for elderly users.',
+    stack: ['Android', 'Java', 'Firebase'],
+    link: 'https://github.com/Kajal3245/ElderCare-Guardian',
+  },
+  {
+    icon: '🔐',
+    banner: 'b1',
+    featured: false,
     type: 'Federated Learning · Research',
-    name: 'Fake Medical Data Detection using Federated Learning + Blockchain',
-    desc: 'A privacy-preserving healthcare system using federated learning and blockchain for secure model training without sharing patient data.',
-    stack: ['BERT', 'HuggingFace', 'spaCy'],
-    link: 'https://github.com/Kajal3245/Federated-Learning-Healthcare-Blockchain',
-  },
-  {
-    icon: ' ', banner: 'b3', featured: false,
-    type: 'Computer Vision',
-    name: 'SafeVision — Real-Time Detection',
-    desc: 'Multi-class object detection at 30 FPS on edge devices. Deployed in 3 pilot programs across university campuses.',
-    stack: ['YOLOv8', 'TensorRT', 'ONNX'],
-    link: '#',
-  },
-  {
-    icon: ' ', banner: 'b1', featured: false,
-    type: 'Reinforcement Learning',
-    name: 'AdaptBot — RL Agent',
-    desc: 'PPO-based agent mastering complex game environments. Achieved superhuman performance on 6 Atari games.',
-    stack: ['PyTorch', 'Gym', 'RLlib'],
-    link: '#',
-  },
-  {
-    icon: ' ', banner: 'b2', featured: false,
-    type: 'MLOps',
-    name: 'ModelForge — ML Pipeline',
-    desc: 'Automated ML pipeline with auto-scaling inference, A/B testing, and drift detection. Serves 10k+ req/day.',
-    stack: ['Kubernetes', 'MLflow', 'FastAPI', 'Redis'],
-    link: '#',
+    name: 'Diabetes Detection using Federated Learning + Blockchain',
+    desc: 'A privacy-preserving healthcare system using federated learning for distributed diabetes prediction and blockchain for secure model-update logging.',
+    stack: ['Python', 'Federated Learning', 'Neural Networks', 'Blockchain'],
+    link: 'https://github.com/Kajal3245/Federated-Learning-Healthcare',
   },
 ]
 
@@ -61,7 +61,20 @@ export default function Projects() {
             <div className="section-label">Portfolio</div>
             <h2 className="section-title">Featured Projects</h2>
           </div>
-          <a href="#" className="btn-ghost" style={{ fontSize: '.78rem', fontFamily: 'Share Tech Mono,monospace', letterSpacing: '.1em' }}>View All →</a>
+
+          <a
+            href="https://github.com/Kajal3245"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ghost"
+            style={{
+              fontSize: '.78rem',
+              fontFamily: 'Share Tech Mono,monospace',
+              letterSpacing: '.1em'
+            }}
+          >
+            View All →
+          </a>
         </motion.div>
 
         <div className="projects-grid">
@@ -71,20 +84,46 @@ export default function Projects() {
               className={`proj-card${p.featured ? ' featured' : ''}`}
               initial={{ opacity: 0, y: 32 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: .8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: .8,
+                delay: i * 0.1,
+                ease: [0.16, 1, 0.3, 1]
+              }}
             >
               <div className={`proj-banner ${p.banner}`}>
                 <span className="proj-icon">{p.icon}</span>
               </div>
+
               <div className="proj-body">
-                <div className="proj-type">{p.type}</div>
-                <div className="proj-name">{p.name}</div>
-                <p className="proj-desc">{p.desc}</p>
+                <div className="proj-type">
+                  {p.type}
+                </div>
+
+                <div className="proj-name">
+                  {p.name}
+                </div>
+
+                <p className="proj-desc">
+                  {p.desc}
+                </p>
+
                 <div className="proj-footer">
                   <div className="proj-stack">
-                    {p.stack.map(s => <span className="stack-tag" key={s}>{s}</span>)}
+                    {p.stack.map(s => (
+                      <span className="stack-tag" key={s}>
+                        {s}
+                      </span>
+                    ))}
                   </div>
-                  <a href={p.link} className="proj-link">↗ View</a>
+
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="proj-link"
+                  >
+                    ↗ View
+                  </a>
                 </div>
               </div>
             </motion.div>
